@@ -14,10 +14,10 @@ const HeroSection = () => {
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent from-60% to-black lg:from-70%"></div>
         <div className="z-20 mx-4 max-w-3xl pb-20">
-          <h1 className="text-4xl font-semibold text-white uppercase tracking-wide md:text-6xl">
+          <h1 className="text-4xl font-semibold uppercase tracking-wide md:text-6xl">
             {PROFILE.name}
           </h1>
-          <p className="pt-2 font-semibold text-white text-xl">{PROFILE.info}</p>
+          <p className="pt-2 font-semibold text-xl">{PROFILE.info}</p>
         </div>
       </div>  
     </>
