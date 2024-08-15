@@ -4,3 +4,8 @@ export const NAVIGATION_LINKS = [
     { label: "Polaroids", href: "#polaroids" },
     { label: "Contact", href: "#contact" },
   ];
+
+  export const PROFILE = {
+    name: "Swan Htar Ni No",
+    info: "Toronto Model and Content Creator"
+  }
