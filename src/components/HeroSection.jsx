@@ -1,4 +1,4 @@
-import { PROFILE } from "../assets/constant";
+import { PROFILE } from "../constant";
 import profilePic from "../assets/SwanHtarNinoProfile.jpg";
 const HeroSection = () => {
   return (
@@ -19,7 +19,7 @@ const HeroSection = () => {
           </h1>
           <p className="pt-2 font-semibold text-xl">{PROFILE.info}</p>
         </div>
-      </div>  
+      </div>
     </>
   );
 };

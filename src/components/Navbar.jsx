@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/Signature.png/";
-import { NAVIGATION_LINKS } from "../assets/constant";
+import { NAVIGATION_LINKS } from "../constant";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const Navbar = () => {
@@ -78,16 +78,16 @@ const Navbar = () => {
         {isMobileMenu && (
           <ul className="ml-4 mt-4 flex flex-col gap-4 backdrop-blur-md">
             {NAVIGATION_LINKS.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      className="block w-full text-xl"
-                      href={item.href}
-                      onClick={(e) => handleLinkClick(e, item.href)}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
+              <li key={index}>
+                <a
+                  className="block w-full text-xl"
+                  href={item.href}
+                  onClick={(e) => handleLinkClick(e, item.href)}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
         )}
       </nav>
