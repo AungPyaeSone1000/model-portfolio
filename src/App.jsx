@@ -1,6 +1,7 @@
 import About from "./components/About";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import Polaroids from "./components/Polaroids";
 import Projects from "./components/Projects";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <HeroSection/>
       <About/>
       <Projects/>
+      <Polaroids/>
       <h1>Hello World</h1>
       
     </main>

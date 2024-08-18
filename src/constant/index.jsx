@@ -40,3 +40,12 @@ export const PROJECTS = [
     image: image3,
   },
 ];
+
+export const POLAROIDS = {
+  Height: "165cm",
+  Bust: "80cm",
+  Waist: "64cm",
+  Hips: "85cm",
+  Dress: "34 EU",
+  Shoe: "38",
+};

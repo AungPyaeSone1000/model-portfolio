@@ -4,10 +4,10 @@ import Card from "../components/Card";
 const Project = () => {
   return (
     <div id="projects">
-      <h2 className="mt-20 text-center text-4xl font-semibold">Projects</h2>
+      <h2 className="mt-20 text-center text-4xl font-semibold ">Projects</h2>
       <div className="flex flex-wrap justify-center py-8">
         {PROJECTS.map((project, index) => {
-          return (
+          return ( 
             <div key={index}>
               <Card
                 image={project.image}
