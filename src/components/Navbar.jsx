@@ -75,7 +75,7 @@ const Navbar = () => {
             </div>
           </div>
           {isMobileMenu && (
-          <ul className="ml-4 mt-4 flex flex-col gap-4 backdrop-blur-md">
+          <ul className="ml-4 flex flex-col gap-4 backdrop-blur-md">
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
                 <a
@@ -90,7 +90,6 @@ const Navbar = () => {
           </ul>
         )}
         </div>
-        
       </nav>
     </div>
   );
