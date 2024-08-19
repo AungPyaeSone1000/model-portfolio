@@ -1,5 +1,6 @@
 import About from "./components/About";
 import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Polaroids from "./components/Polaroids";
@@ -14,6 +15,7 @@ const App = () => {
       <Projects/>
       <Polaroids/>
       <ContactForm/>
+      <Footer/>
       
     </main>
   );

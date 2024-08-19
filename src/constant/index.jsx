@@ -2,6 +2,13 @@ import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/profilepic.jpg";
 
+import {
+  FaXTwitter,
+  FaFacebook,
+  FaInstagram,
+  FaThreads
+} from "react-icons/fa6";
+
 export const NAVIGATION_LINKS = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
@@ -49,3 +56,22 @@ export const POLAROIDS = {
   Dress: "34 EU",
   Shoe: "38",
 };
+
+export const SOCIAL_MEDIA_LINKS = [
+  {
+    href: "https://www.facebook.com/swanh7ar.nino",
+    icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
+  },
+  {
+    href: "https://www.instagram.com/swanhtar.nino/",
+    icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
+  },
+  {
+    href: "https://x.com/",
+    icon: <FaXTwitter fontSize={25} className="hover:opacity-80" />,
+  },
+  {
+    href: "https://x.com/",
+    icon: <FaThreads fontSize={25} className="hover:opacity-80" />,
+  }
+];
