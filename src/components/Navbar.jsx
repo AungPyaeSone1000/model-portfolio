@@ -58,7 +58,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between ">
             <div>
               <a href="#">
-                <img src={logo} width={80} alt="logo" className="m-2" />
+                <img src={logo} width={90} alt="logo" className="m-2" />
               </a>
             </div>
             <div className="flex items-center">
@@ -74,9 +74,8 @@ const Navbar = () => {
               </button>
             </div>
           </div>
-        </div>
-        {isMobileMenu && (
-          <ul className="ml-4 flex flex-col gap-4 backdrop-blur-md">
+          {isMobileMenu && (
+          <ul className="ml-4 mt-4 flex flex-col gap-4 backdrop-blur-md">
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
                 <a
@@ -90,6 +89,8 @@ const Navbar = () => {
             ))}
           </ul>
         )}
+        </div>
+        
       </nav>
     </div>
   );
