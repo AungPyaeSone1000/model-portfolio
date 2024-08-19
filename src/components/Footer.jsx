@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import logo from "../assets/Signature.png/";
 import { SOCIAL_MEDIA_LINKS } from "../constant";
+
 
 const Footer = () => {
   return (
@@ -7,9 +9,13 @@ const Footer = () => {
       <div className="flex item-center justify-center gap-8">
         {SOCIAL_MEDIA_LINKS.map((link,index)=>{
           return(
-          <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">
+          <motion.a key={index} href={link.href} target="_blank" rel="noopener noreferrer"
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:0.2, delay:0.5*index}}
+          >
             {link.icon}
-          </a>)
+          </motion.a>)
         })}
       </div>
       <p className="mt-8 text-center text-sm tracking-wide">
