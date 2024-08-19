@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -66,7 +67,13 @@ const ContactForm = () => {
       <h2 className="my-8 text-center text-4xl font-semibold tracking-tighter">
         Contact Me
       </h2>
-      <form onSubmit={handleSubmit} className="text-black">
+      <motion.form
+        onSubmit={handleSubmit}
+        className="text-black"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
         <div className="mb-4">
           <input
             type="text"
@@ -78,7 +85,16 @@ const ContactForm = () => {
             className="mb-8 w-full appearance-none rounded-lg text-white
             bg-transparent px-3 py-2 text-sm focus:bg-gray-100 focus:text-black"
           />
-          {error.name && <p className="text-sm text-pink-700">{error.name}</p>}
+          {error.name && (
+            <motion.p
+              className="text-sm text-pink-700"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              aria-live="polite"
+            >
+              {error.name}
+            </motion.p>
+          )}
         </div>
         <div className="mb-4">
           <input
@@ -92,7 +108,14 @@ const ContactForm = () => {
             bg-transparent px-3 py-2 text-sm focus:bg-gray-100 focus:text-black"
           />
           {error.email && (
-            <p className="text-sm text-pink-700">{error.email}</p>
+            <motion.p
+              className="text-sm text-pink-700"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              aria-live="polite"
+            >
+              {error.email}
+            </motion.p>
           )}
         </div>
         <div className="mb-4">
@@ -107,7 +130,14 @@ const ContactForm = () => {
             rows="4"
           />
           {error.message && (
-            <p className="text-sm text-pink-700">{error.message}</p>
+            <motion.p
+              className="text-sm text-pink-700"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              aria-live="polite"
+            >
+              {error.message}
+            </motion.p>
           )}
         </div>
         <button
@@ -118,7 +148,7 @@ const ContactForm = () => {
         >
           {isSending ? "Sending..." : "Send"}
         </button>
-      </form>
+      </motion.form>
     </div>
   );
 };
