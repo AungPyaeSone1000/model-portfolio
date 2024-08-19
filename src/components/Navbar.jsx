@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../assets/Signature.png/";
 import { NAVIGATION_LINKS } from "../constant";
 import { FaTimes, FaBars } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
@@ -33,13 +34,23 @@ const Navbar = () => {
           <div className="flex justify-center items-center gap-6">
             <div>
               <a href="#">
-                <img src={logo} width={90} alt="logo" />
+                <motion.img
+                  src={logo}
+                  width={90}
+                  alt="logo"
+                  whileHover={{ scale: 1.5 }}
+                  whileTap={{ scale: 0.85 }}
+                />
               </a>
             </div>
             <div>
               <ul className="flex items-center gap-4">
                 {NAVIGATION_LINKS.map((item, index) => (
-                  <li key={index}>
+                  <motion.li
+                    key={index}
+                    whileHover={{ scale: 1.5 }}
+                    whileTap={{ scale: 0.85 }}
+                  >
                     <a
                       className="text-sm hover:text-yellow-400"
                       href={item.href}
@@ -47,7 +58,7 @@ const Navbar = () => {
                     >
                       {item.label}
                     </a>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
@@ -75,20 +86,22 @@ const Navbar = () => {
             </div>
           </div>
           {isMobileMenu && (
-          <ul className="ml-4 flex flex-col gap-4">
-            {NAVIGATION_LINKS.map((item, index) => (
-              <li key={index}>
-                <a
-                  className="block w-full text-xl"
-                  href={item.href}
-                  onClick={(e) => handleLinkClick(e, item.href)}
+            <ul className="ml-4 flex flex-col gap-4">
+              {NAVIGATION_LINKS.map((item, index) => (
+                <motion.li key={index}
+                whileTap={{ scale: 0.9 }}
                 >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
+                  <a
+                    className="block w-full text-xl"
+                    href={item.href}
+                    onClick={(e) => handleLinkClick(e, item.href)}
+                  >
+                    {item.label}
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          )}
         </div>
       </nav>
     </div>
