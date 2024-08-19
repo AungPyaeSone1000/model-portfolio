@@ -9,7 +9,7 @@ const containerVariants = {
     y: 0,
     transition: {
       duration: 1,
-      staggerChildren: 0.7,
+      staggerChildren: 0.3,
     },
   },
 };
@@ -47,19 +47,20 @@ const Polaroids = () => {
             className="lg:w-auto"
           />
         </motion.div>
-        <motion.div
+        <div
           className="text-md flex flex-col justify-center items-center lg:basis-1/2 space-y-6 p-9"
           variants={itemVariants}
         >
           {Object.entries(POLAROIDS).map(([key, value], index) => (
-            <span
+            <motion.span
               key={index}
               className="py-1 border-b-2 border-yellow-200 font-semibold lg:text-xl"
+              variants={itemVariants}
             >
               <strong>{key}:</strong> {value}
-            </span>
+            </motion.span>
           ))}
-        </motion.div>
+        </div>
       </motion.div>
     </div>
   );
