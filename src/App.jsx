@@ -1,4 +1,5 @@
 import About from "./components/About";
+import ContactForm from "./components/ContactForm";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Polaroids from "./components/Polaroids";
@@ -12,7 +13,7 @@ const App = () => {
       <About/>
       <Projects/>
       <Polaroids/>
-      <h1>Hello World</h1>
+      <ContactForm/>
       
     </main>
   );
